@@ -4,4 +4,4 @@
 
 - name: Deploy NFS PVs on rhacm SNO Cluster
   import_tasks: deploy_nfs_sno.yml
-  when: deploy_type == 'sno-iso'
+  when: deploy_type == 'sno'
