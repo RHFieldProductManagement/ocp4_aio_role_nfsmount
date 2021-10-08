@@ -3,7 +3,7 @@
 
 - name: Copy over k8s-aio env requirements.txt
   ansible.builtin.copy:
-    src: ../conf/k8s/requirements.txt
+    src: requirements.txt
     dest: /tmp/requirements.txt
 
 - name: "Create k8s-aio venv"
@@ -20,7 +20,7 @@
 - name: Apply NFS storage class and basic PV entries
   k8s:
     state: present
-    definition: "{{ lookup('file', '../conf/k8s/nfs-storage.yaml') }}"
+    definition: "{{ lookup('file', 'nfs-storage.yaml') }}"
   register: nfs_storage_success
   retries: 5
   delay: 30
