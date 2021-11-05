@@ -34,5 +34,4 @@
   retries: 5
   delay: 30
   until: default_class_success is not failed
-  when: not ocp4_aio_deploy_ocs
-  # Above we make the assumption that if you've deployed OCS, that will be default storage class.
+
